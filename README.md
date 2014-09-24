@@ -6,7 +6,7 @@ Copyright (C) 2014 Peter Gaivoronski. All Rights Reserved.
 A base model to utilize a generic database ORM with helper functions in Node.js.
 
 ## ConcurrentPhysics ##
-A sample processor for Node.js that allows the simulation of many physics problems in a small period of time, so that the server is able to serve many concurrent gaming clients at the same time as a central controller.
+A sample processor for Node.js that allows the simulation of many physics problems in a small period of time, so that the server is able to serve many concurrent clients at the same time as a central controller.
 
 ## DynamoDBDriver ##
 A driver for Node.js that allows one to construct a simple ORM for Amazon's DynamoDB distributed cloud databse.
