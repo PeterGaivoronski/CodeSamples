@@ -9,7 +9,7 @@ A base model to utilize a generic database ORM with helper functions in Node.js.
 A sample processor for Node.js that allows the simulation of many physics problems in a small period of time, so that the server is able to serve many concurrent clients at the same time as a central controller.
 
 ## DynamoDBDriver ##
-A driver for Node.js that allows one to construct a simple ORM for Amazon's DynamoDB distributed cloud databse.
+A driver for Node.js that allows one to construct a simple ORM for Amazon's DynamoDB distributed cloud database.
 
 * Includes integration/validation tests
 
