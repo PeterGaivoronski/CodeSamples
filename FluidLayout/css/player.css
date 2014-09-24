@@ -1,0 +1,28 @@
+.playerContainer{
+	/*height: 1.5em;*/
+	border: 1px solid #ffffff;
+	border-radius: 2px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.2);
+	/*padding: 0.05em;*/
+	line-height: 0;
+	text-align: center;
+}
+.playerContainer.selected{
+	/*width: 3.516em;*/
+	z-index: 101;
+}
+
+.playerContainer .contents{
+	font-size: 0.75em;
+	width: 4.688em;
+	margin: 0.05em;
+}
+.playerContainer.selected .contents{
+	font-size: 2em;
+}
+
+.playerContainer.local .contents{
+	font-size: 1.5em;
+	width: inherit;
+} 

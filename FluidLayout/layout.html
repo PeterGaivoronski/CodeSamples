@@ -1,0 +1,1549 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="html5reset-1.6.1.css">
+
+<script type="text/javascript" src = "js/lib/jquery-1.10.2.js"></script>
+
+<script type="text/javascript" src = "js/helpers.js"></script>
+
+<script type="text/javascript" src = "js/layout.js"></script>
+
+<script type="text/javascript" src = "js/chat.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/card.css">
+<link rel="stylesheet" type="text/css" href="css/player.css">
+<link rel="stylesheet" type="text/css" href="css/deck.css">
+<link rel="stylesheet" type="text/css" href="css/chat.css">
+
+<title>Card Game Test Layout</title>
+
+</head>
+
+<body>
+
+<audio id = "mc1" class = "mscChannel" preload = "none"></audio>
+<audio id = "sc1" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc2" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc3" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc4" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc5" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc6" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc7" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc8" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc9" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc10" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc11" class = "sndChannel" preload = "auto"></audio>
+<audio id = "sc12" class = "sndChannel" preload = "auto"></audio>
+
+<div id = "mainContainer">
+	<div id = "page">
+		<div id = "header">
+			<!-- <img id = "logo" src = "designs/logo-pathed-o.svg"/> -->
+			<div id = "headerButtonContainer">
+			<div class = "headerButton">
+				Home
+			</div><div class = "headerButton">
+				PVP
+			</div><div class = "headerButton">
+				Store
+			</div>
+			</div>
+
+		</div>
+		<div id = "bg">
+			<div id = "selectionOverlay"></div>
+			<div id = "overlay">
+				<div id = "fullscreen">
+				</div>
+				<div class = "cardLargeViewContainer" style = "display: none;">
+					<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+					<div class = "effectIcons">
+						<div style = "background-image: url('images/icons/fire.gif'); background-size: 0.6em 0.6em; background-repeat: no-repeat;">
+							<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+						</div>
+						<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+						<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+					</div>
+					<div class = "cardOverlay"></div>
+					<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+					<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+					<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+					<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+					<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+					<div class = "cardInfoContainer cardStatsContainer">
+						<div class = "cardTitle thickBorder">
+							<div class = "tableRow">
+								<div class = "tableCell statCell first">
+									<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+								</div>
+								<div class = "tableCell statCell">
+									<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+								</div>
+								<div class = "tableCell statCell last">
+									<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class = "playerContainer" style="top: 2.5em; left: 0.2em;">
+				<div class = "contents">
+					<div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot last">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div><div style = "display: block"></div><div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				</div>
+
+
+
+
+				<div class = "playerContainer" style="top: 0.2em; left: 4.242em;">
+				<div class = "contents">
+					<div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div><div style = "display: block"></div><div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				</div>
+
+
+
+				<div class = "playerContainer" style="top: 2.5em; right: 0.2em;">
+				<div class = "contents">
+					<div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot last">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div><div style = "display: block"></div><div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				</div>
+
+
+
+
+				<div class = "playerContainer local" style="bottom: 0.1em; left: 0.5em;">
+				<div class = "contents">
+					<div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div><!-- <div style = "display: block"></div> --><div class = "deck">
+						<div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div><div class = "deckSlot">
+							<div class = "uiActionContainer" style = "display: none;">
+								<div class = "uiAction first">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div><div class = "uiAction">
+									<img class = "uiActionImage glass light" src = "designs/card/glasslight-o.svg"/>
+									<img class = "uiActionImage glass dark" src = "designs/card/glassdark-o.svg"/>
+								</div><div class = "uiAction last">
+									<img class = "uiActionImage light" src = "designs/card/bootlight-o.svg"/>
+									<img class = "uiActionImage dark" src = "designs/card/bootdark-o.svg"/>
+								</div>
+							</div>
+							<div class = "cardSmallViewContainer">
+								<img class = "cardLargeView thickBorder" src = "images/900/woodlandtemplarlow.jpg"/>
+								<img class = "cornerPiece top topLeftCorner" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece top topRightCorner flipHorizontal" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomLeftCorner flipVertical" src = "designs/card/corner2i_opt.svg"/>
+								<img class = "cornerPiece bottom bottomRightCorner flipBoth" src = "designs/card/corner2i_opt.svg"/>
+								<div class = "cardInfoContainer cardTitleContainer"><div class = "cardTitle thickBorder"><span class = "cardText cardTitleText">Annihilator</span></div></div>
+								<div class = "cardInfoContainer cardStatsContainer">
+									<div class = "cardTitle thickBorder">
+										<div class = "tableRow">
+											<div class = "tableCell statCell first">
+												<img class = "statIcon" src = "designs/card/sword_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell">
+												<img class = "statIcon" src = "designs/card/energy_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+											<div class = "tableCell statCell last">
+												<img class = "statIcon" src = "designs/card/shield_opt.svg"/><span class = "cardText cardStatText">33</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "effectIcons">
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+									<img class = "effectIcon" src = "designs/card/icon_gif_opt.svg"/>
+								</div>
+								<div class = "cardOverlay"></div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				</div>
+
+
+
+
+				<div id = "globalChatContainer">
+					<div id = "chatContainer" class = "noBG" style="left: 0; bottom: 0.26em;">
+						<div class = "chatWindow">
+							<!-- <div class = "lockScroll"></div> -->
+							<!-- <div class = "chatRow"> -->
+								<div class = "chatMessages">
+									<div class = "chatMessageText">
+									chat_dude1> hello<br>
+									</div>
+								</div>
+							<!-- </div> -->
+						</div>
+					</div>
+					<div id = "chatEntryContainer" style="left: 0; bottom: 0;">
+						<div class = "chatEntry">
+							<input class = "chatEntryInput" type = "text" value = "my message"/>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id = "footer" style = "height: 20px;">
+			stuff
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+#globalChatContainer{
+	left: 0;
+	bottom: 0em;
+	position: absolute;
+}
+
+#chatContainer{
+	width: 4em;
+	height: 1.5em;
+	background-color: rgba(0, 0, 0, 0.5);
+	/*padding: 0.05em;*/
+	position: absolute;
+	color: #ffffff;
+	/*opacity: 0.3;*/
+	overflow: hidden;
+}
+#chatContainer.noBG{
+	background: none;
+}
+#chatContainer:hover{
+	/*opacity: 1;*/
+}
+.chatWindow{
+	font-size: 0.2em;
+	line-height: 1em;
+	/*display: table;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.lockScroll{
+	position: absolute;
+	display: block;
+	width: 0.75em;
+	height: 0.75em;
+	background-color: #ffffff;
+	right: 1.2em;
+	top: 0.5em;
+}
+.chatRow{
+	display: table-row;
+}
+.chatMessages{
+	
+}
+.chatMessageText{
+	height: 7.5em;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 23em;
+	padding-right: 3em;
+	word-wrap: break-word;
+}
+.chatMessages, .chatEntry{
+	/*display: table-cell;*/
+}
+#chatEntryContainer{
+	width: 4em;
+	height: 0.26em;
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+	position: absolute;
+	color: #ffffff;
+	/*opacity: 0.3;*/
+	overflow: hidden;
+}
+.chatEntry{
+	font-size: 0.2em;
+	width: 100%;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.chatEntryInput{
+	font-size: 1em;
+	width: 100%;
+	display: block;
+	height: 1.3em;
+	vertical-align: middle;
+	color: #ffffff;
+	background: none;
+	border: 0px;
+	/*bottom: 0;*/
+	/*position: absolute;*/
+	padding: 0px;
+	outline: 0;
+} 

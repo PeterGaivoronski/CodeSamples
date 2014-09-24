@@ -1,0 +1,35 @@
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 7.652 17.309" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<defs>
+<linearGradient id="linearGradient11120" y2="918.66" gradientUnits="userSpaceOnUse" y1="905.24" gradientTransform="translate(-349.75586,-207.27189)" x2="1062.8" x1="1048.4">
+<stop stop-color="#e5e2df" offset="0"/>
+<stop stop-color="#ded9d6" offset="0"/>
+<stop stop-color="#cfccc9" offset="0.0381"/>
+<stop stop-color="#a8a8a8" offset="0.1113"/>
+<stop stop-color="#6a7072" offset="0.2112"/>
+<stop stop-color="#465053" offset="0.264"/>
+<stop stop-color="#878d8f" offset="0.3722"/>
+<stop stop-color="#b7babb" offset="0.4638"/>
+<stop stop-color="#d5d6d6" offset="0.5335"/>
+<stop stop-color="#e0e0e0" offset="0.573"/>
+<stop stop-color="#d6d7d8" offset="0.632"/>
+<stop stop-color="#bcbfc2" offset="0.7314"/>
+<stop stop-color="#92989e" offset="0.8582"/>
+<stop stop-color="#8b9298" offset="0.8764"/>
+<stop stop-color="#d1d3d4" offset="1"/>
+<stop stop-color="#a7a9ac" offset="1"/>
+</linearGradient>
+</defs>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(-699.03114,-692.27911)">
+<path d="m706.68,705.9-1.879-0.001c0.59-1.311,3.471-8.525-2.07-13.62,0,0-5.711,4.835-1.707,13.616l-1.992-0.002-0.001,0.831,1.931,0.001v2.859l3.805,0.004,0.001-2.859,1.915,0.001v-0.83z" fill-rule="evenodd" fill="url(#linearGradient11120)"/>
+</g>
+</svg>
